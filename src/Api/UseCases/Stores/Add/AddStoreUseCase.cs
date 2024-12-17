@@ -1,6 +1,6 @@
 ﻿using Api.Database.Stores;
 using Api.Entities;
-
+using Api.UseCases;
 using static System.Net.HttpStatusCode;
 
 namespace Api.UseCases.Stores.Add;

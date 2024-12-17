@@ -30,4 +30,4 @@ app.UseHttpsRedirection();
 app.MapControllers().WithOpenApi();
 app.UseHealthChecks("/health");
 
-app.Run();
+await app.RunAsync();

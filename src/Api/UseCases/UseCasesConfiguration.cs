@@ -1,6 +1,7 @@
 ﻿using Api.UseCases.Notifications.SendNotification;
 using Api.UseCases.Stores.Add;
 using Api.UseCases.Stores.PollStoreItems;
+using Api.UseCases.Stores.Search;
 using Polly;
 using Polly.Retry;
 using Refit;
@@ -17,12 +18,14 @@ public static class UseCasesConfiguration
                 TimeSpan.FromSeconds(5),
                 TimeSpan.FromSeconds(10)
             ]);
+    
     public static IServiceCollection AddUseCases(
         this IServiceCollection services)
     {
         services.AddSingleton<IAddStoreUseCase, AddStoreUseCase>();
         services.AddSingleton<IPollStoreItemsUseCase, PollStoreItemsUseCase>();
         services.AddSingleton<ISendNotificationUseCase, SendNotificationUseCase>();
+        services.AddSingleton<ISearchStoresUseCase, SearchStoresUseCase>();
 
         return services;
     }

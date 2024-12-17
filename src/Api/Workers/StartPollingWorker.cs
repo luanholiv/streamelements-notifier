@@ -1,5 +1,4 @@
 ﻿using System.Threading.Channels;
-
 using Api.Entities;
 using Api.UseCases.Stores.PollStoreItems;
 
